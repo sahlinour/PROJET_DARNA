@@ -1,14 +1,35 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../../Header';
 import CountUp from 'react-countup';
-import Filter from './components/Filters/Filter'
-import ListCard from './components/ListCard';
+import Filter from '../Filters/Filter'
+import ListAnnonce from '../Cards/ListAnnonce';
+import '../../style.css'
+import About from '../../About';
+import Footer from '../../Footer';
+import Propre from '../../Propre';
 function Accueil() {
   return (
-    <div className="bg-gradient-to-r from-cyan-950 to-blue-950 min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <div>
+      <div className="home ">
+      <div className="secContainer container ">
+      <div className="homeText text-center mt-20">
+        </div>
+      </div>
+         </div>
+      <Filter />
+      <ListAnnonce />
+      <About />
+      <Propre />
+      <Footer />
+    </div>
+  );
+}
+
+export default Accueil;
+
+
+ {/* <div>
           <div className='title1 flex items-center'>
             <div className='circle'></div>
             <h1 className="text-4xl font-bold text-white title">Bienvenue sur notre <br/> site immobilier</h1>
@@ -52,16 +73,8 @@ function Accueil() {
             </div>
           </div>
         </div>
-          </div>
+          </div> */}
          
-        <div className="flex items-center image-container my-12">
-          <img src="/images/télécharger (7).jpeg" alt="Logo" className="" />
-        </div>
-      </div>
-      <Filter />
-      <ListCard />
-    </div>
-  );
-}
-
-export default Accueil;
+         {/* <div className="flex items-center image-container my-10 border border-emerald-400 " >
+    <img src="/images/télécharger (7).jpeg" alt="Logo" className="hidden" />
+</div> */}
